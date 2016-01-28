@@ -5,7 +5,7 @@ var SongQueueView = Backbone.View.extend({
 
   initialize: function() {
     this.render();
-    //call playFirst from song queue
+    this.listenTo(this.collection, 'add dequeue', this.render);
   },
 
   render: function() {
