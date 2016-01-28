@@ -12,13 +12,7 @@ var LibraryEntryView = Backbone.View.extend({
     }
 
   },
-  // events: {
-  //   //when song ends: 
-      
-  //     //music.addEventListener("ended",function(){
-  //       this.model.dequeue();
-  //   }
-  // }
+  
 
   render: function(){
     return this.$el.html(this.template(this.model.attributes));
