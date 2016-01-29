@@ -18,16 +18,25 @@ var SongQueue = Songs.extend({
     }, this),
 
     this.on('dequeue', function(song){
-      console.log('this is invoked');
       this.remove(song);
       if(this.length > 0) {
         this.playFirst();
+      } else {
+        this.stopPlay();
       }
     }, this)
   },
 
   playFirst: function() {
     this.at(0).play();
+  },
+
+  stopPlay: function() {
+    $('audio').each(function() {
+      this.pause();
+      this.currentTime = 0;
+    });
+
   }
 
   
