@@ -9,7 +9,6 @@ var SongQueueEntryView = Backbone.View.extend({
   events : {
     'click' : function() {
       this.model.dequeue();
-            // this.model.dequeue();
     }
   },
   
@@ -17,8 +16,3 @@ var SongQueueEntryView = Backbone.View.extend({
     return this.$el.html(this.template(this.model.attributes));
   }
 });
-
-
-//render: function(){
-//    return this.$el.html(this.template(this.model.attributes));
-//  }
